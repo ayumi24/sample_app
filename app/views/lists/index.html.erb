@@ -2,6 +2,8 @@
 <% @lists.each do |list| %>
 
 <p>タイトル</p>
-<span><%= list.title %></span>
+<span>
+  <%= link_to list.title,"/lists/#{list.id}" %>
+</span>
 
 <% end %>

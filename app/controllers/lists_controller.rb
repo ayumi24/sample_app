@@ -12,10 +12,15 @@ class ListsController < ApplicationController
     redirect_to '/top'
 
   end
-  
+
+  def show
+    @list = List.find(params[:id])
+
+  end
+
   def index
     @lists = List.all
-  end  
+  end
 
   private
     def list_params
